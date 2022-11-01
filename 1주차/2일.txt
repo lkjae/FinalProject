@@ -1,0 +1,43 @@
+우분투 20.40설치
+:%s/kr.archive..ubuntu.com/ftp.daumkakao.com
+:wq
+$>sudo apt update
+
+ftp.daumkakao.com 다운로드가 빠른 미러사이트로 교체
+
+sudo apt install gcc make net-tools
+
+게스트 확장 이미지 설치
+VM화면에서 장치 --> 게스트 확장 이미지 삽입
+media/rip/VBox_GAs_6.1.10$ sudo ./VBoxLinuxAdditions.run 실행
+
+sudo reboot
+
+vi .vimrc파일을 만들어 준 뒤
+기본적인 설정 저장
+  1 set nu "줄번호
+
+  2 set autoindent "자동 들여쓰기
+
+  3 set ts=4 "tab 크기 
+
+  4 set cindent " C언어 자동 들여쓰기
+
+  5 set history=256
+
+  6 set laststatus=2 " 상태바 표시 항상
+
+  7 set shiftwidth=4 " 자동 들여쓰기 너비 설정
+
+  8 set showmatch " 일치하는 괄호 하이라이팅
+
+  9 set smartcase " 검색시 대소문자 구별
+
+ 10 set smarttab
+
+ 11 set smartindent
+
+ 12 set tabstop=4
+
+ 13 set ruler " 현재 커서 위치 표시
+
