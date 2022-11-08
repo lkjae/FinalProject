@@ -1,0 +1,36 @@
+VMware workstation 설치
+https://gist.github.com/williamgh2019/cc2ad94cc18cb930a0aab42ed8d39e6f
+
+0. 부팅 모드 변경 (multi-user)
+#sudo systemctl set-default multi-user.target
+#reboot
+
+1. 네트워크 툴 설치
+#apt install net-tools
+#ifconfig --> ip대역, 인터페이스명 확인
+#route -n --> 기본 게이트웨이 확인
+
+3. IPS 고정 ip
+vi /etc/netplan/50-cloud-init.yaml
+network:
+  ethernets:
+    ens33:  --> 1에서 확인한 인터페이스 명
+      addresses:
+      - 192.168.211.254/24   -->ACOM: 100 / BCOM: 200
+      gateway4: 192.168.211.2 --> 기본게이트웨이에서 확인한 ip
+      nameservers:
+        addresses:
+        - 8.8.8.8
+        search:
+        - 8.8.4.4
+  version: 2
+
+4. 네트워크 설정 적용
+#netplan apply
+#ifconfig --> 설정 적용 확인
+
+5. 원격접속을 위한 ssh 서버 설치
+# apt-get install openssh-server
+
+기본 IPS하나와 ACOM Virtual Machine하나를 만들어 주어서 위 작업 
+ACOM을 COPY한 BCOM생성 후 위 작업 시행
