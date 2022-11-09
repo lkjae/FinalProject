@@ -1,0 +1,2 @@
+ips에서 suricata를 설치
+https://daeunnniii.tistory.com/107
