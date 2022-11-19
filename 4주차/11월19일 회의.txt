@@ -11,10 +11,13 @@ IDS(suricata)
 MRTG참조 트래픽을 보여주기위한 프로토콜 망관리도구
 IDS / IPS구분
 세팅
-정책 (policy)
-현재등록된 룰
-스노트 장비 접속정보(엔진상태)
+https://github.com/digitalbond/Quickdraw-Snort/blob/master/bacnet.rules
 탐지규칙
+현재등록된 룰
+
+정책 (policy)
+스노트 장비 접속정보(엔진상태)
+
 
 DB접속정보(로그)
 터미널
