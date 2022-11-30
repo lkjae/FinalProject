@@ -1,0 +1,3 @@
+기존 폼으로 옮기는 작업 완료했고 DevExpress사용해서 Treelist구현
+Treelist node클릭 시 textbox에 띄우기 구현
+Value를 바꾸었을때 바로 적용이 안되고 다른 노드를 클릭해야 값이 들어가짐 (CellValueChanged 아마 이거 써서 그런거같음 더 찾아보고 수정)
