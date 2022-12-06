@@ -1,0 +1,8 @@
+12-06(화)
+* 메인 대쉬보드에 실시간 로그를 확인할 수 있게 logThread를 만들어 
+폼 로드시 log파일을 "tail -f /var/log/suricata/fast.log"명령어를 사용하여 실시간으로 가져오는작업 완료했다.(스레드 문제로 작동하지 않던거 해결)
+(실시간 로그 확인.PNG)
+
+* WINFORM에서 룰을 만들어서 서버에 룰 추가 버튼을 클릭하면, 작성된 룰이 라즈베리파이 suricata로 갈 수 있도록
+ruleThread를 만들어  $"echo -e \"{textBox_candiRule.Text}\" >> /var/lib/suricata/rules/test.rules" 명령어를
+실행 시켰다. (서버룰추가.png , suricata룰추가.png )
