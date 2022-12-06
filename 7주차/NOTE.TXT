@@ -6,3 +6,10 @@
 * WINFORM에서 룰을 만들어서 서버에 룰 추가 버튼을 클릭하면, 작성된 룰이 라즈베리파이 suricata로 갈 수 있도록
 ruleThread를 만들어  $"echo -e \"{textBox_candiRule.Text}\" >> /var/lib/suricata/rules/test.rules" 명령어를
 실행 시켰다. (서버룰추가.png , suricata룰추가.png )
+
+* 해야 할 일
+스마트팩토리 유해 모델 설계 및 구현
+sid값을 줄 때, 일정범위(예: 1 ~ 100)까지 사용하면 유해유형 목록에 포함시키도록
+콤보박스에 들어갈 내용은 msg의 값이 되고, 해당 msg를 선택하면 해당 룰이 아래 필드에 자동으로 채워지게해서,
+사용자가 변형해서 등록할 수 있는 레퍼런스 기능 구현
+
